@@ -25,7 +25,6 @@ class LocationController {
             obj.city = city;
             const location = await Location
                 .create(obj)
-                .select(['-createdAt', '-updatedAt']);
 
             res.status(200).json({
                 "success": "true",

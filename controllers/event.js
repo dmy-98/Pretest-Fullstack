@@ -31,7 +31,6 @@ class EventController {
 
             const event = await Event
                 .create(obj)
-                .select(['name', 'city']);
 
             res.status(200).json({
                 "success": "true",

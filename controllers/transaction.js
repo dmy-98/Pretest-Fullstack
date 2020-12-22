@@ -78,7 +78,6 @@ class TransactionController {
                 .select(['-createdAt', '-updatedAt'])
 
             for (let i in booked) {
-                console.log(ticketInput[i]._id, remain[i])
                 await Ticket.findByIdAndUpdate(ticketInput[i]._id, { $set: { quantity: remain[i] } })
             }
             res.status(200).json({
